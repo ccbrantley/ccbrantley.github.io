@@ -21,12 +21,13 @@
     function renderButton() {
       gapi.signin2.render('my-signin2', {
         'scope': 'profile email',
-        'width': 800,
-        'height': 800,
+        'width': 480,
+        'height': 100,
         'longtitle': true,
         'theme': 'dark',
         'onsuccess': onSuccess,
         'onfailure': onFailure
+        'vertical-align': middle;
       });
     }
   </script>
