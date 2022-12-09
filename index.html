@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-		<link rel = "stylesheet" href = "index.css">
+		<link rel = "stylesheet" href = "./stylesheets/index.css">
     </head>
     <body>
-        <h>Github</h>
+        <h id = "h_2">Github</h>
+		<h id = "h_1"></h>
+		<script>
+			const element = document.getElementById("h_1");
+			setInterval(function() {element.innerHTML += "<br>Hello"}, 1000);
+		</script>
     </body>
 </html>
