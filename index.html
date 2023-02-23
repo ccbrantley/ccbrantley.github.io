@@ -8,7 +8,35 @@
 		<h id = "h_1"></h>
 		<script>
 			const element = document.getElementById("h_1");
-			setInterval(function() {element.innerHTML += "<br>Hello"}, 1000);
+			//setInterval(function() {element.innerHTML += "<br>Hello"}, 1000);
 		</script>
+		
+<canvas id="myCanvas" width="500" height="500" style="border:1px solid lightgray;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+<script src="https://randojs.com/2.0.0.js"></script>
+<script>
+var canvas = document.getElementById("myCanvas");
+var context = canvas.getContext("2d")
+var gridWidth = canvas.width;
+var gridHeight = canvas.height;
+var gridOfLife = new Array();
+for (var heightIndex = 0; heightIndex < gridHeight; heightIndex++) {
+  gridOfLife.push(new Array());
+  for (var widthIndex = 0; widthIndex < gridWidth; widthIndex++) {
+    gridOfLife[heightIndex].push(Math.floor(Math.random() + .1));
+  }
+}
+for (var row = 0; row < gridHeight; row++) {
+  for (var col = 0; col < gridWidth; col++) {
+    if (gridOfLife[row][col]) {
+      context.beginPath();
+      context.rect(col, row, 1, 1);
+      context.stroke();
+    }
+  }
+}
+</script>
+
+<h1>Fin.</h1>
 	</body>
 </html>
