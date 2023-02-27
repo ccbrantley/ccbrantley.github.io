@@ -1,16 +1,80 @@
-:root
-{
-	--primary_color : #00BCD4;
-	--light_primary_color : #B2EBF2;
-	--dark_primary_color : #0097A7;
-	--primary_text : #212121;
-	--secondary_text : #757575;
-	--text_or_icons : #FFFFFF;
-	--accent_color : #FF5722;
-	--divider_color : #BDBDBD;
+/*
+ * Alice Blue: #E7F0FF
+ * Icterine: #FFFF82
+ * Persian Orange: #D68C45
+ * Jet: #2F2F2F
+ * Dark Slate gray: #354F52
+ *
+*/
+body {
+	background-color: #FFFF82;
 }
 
-body
-{
-	background-color : var(--primary_color);
+.C000_container {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.C000_h1 {
+	grid-area: "header";
+}
+
+.C000_canvas_container {
+	align-items: center;
+	background-color: #2F2F2F;
+	border: 5px round #2F2F2F;
+	border-radius: 10px;
+	flex: none;
+	padding: 5px;
+}
+
+.C000_canvas {
+	
+	background-color: #E7F0FF;
+	border: 4px double #354F52;
+	border-radius: 5px;
+	display: block;
+}
+
+.C000_form_container {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: auto;
+	grid-template-rows: auto;
+	grid-template-areas:
+	"magnify_increase magnify_decrease ."
+	"form form form";
+}
+
+.C000_magnify_increase {
+	grid-area: "magnify_increase";
+}
+
+.C000_magnify_decrease {
+	grid-area: "magnify_decrease";
+}
+
+.C000_button_magnify_increase, .C000_button_magnify_decrease {
+	width: 50px;
+	height: 50px;
+}
+
+.C000_form {
+	grid-area: form;
+}
+
+
+
+.C000_form_cell_count_label {
+	grid-area: "cell_count_label";
+}
+
+.C000_form_cell_count_input {
+	grid-area: "cell_count_input";
+}
+
+.C000_form_cell_count_submit {
+	grid-area: "cell_count_submit";
 }
